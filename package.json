@@ -1,0 +1,30 @@
+{
+  "name": "parcel-vue-pwa-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "leafiy <t@leafiy.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rm -rf dist/* && NODE_ENV=development parcel src/index.html",
+    "build": "rm -rf build/* && NODE_ENV=production  parcel build --out-dir build src/index.html --public-url /"
+  },
+  "sw": {
+    "swSrc": "sw.js",
+    "minify": false,
+    "cacheId": "parcel-vue-pwa-cache"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2",
+    "parcel-plugin-vue": "^1.5.0",
+    "parcel-plugin-sw-precache2": "^0.1.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
+    "vuex": "^3.0.1"
+  }
+}
